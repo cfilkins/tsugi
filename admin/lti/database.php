@@ -1183,8 +1183,8 @@ $DATABASE_UPGRADE = function($oldversion) {
     echo("Checking lti_keyset<br/>\n");
     $success = \Tsugi\Core\Keyset::maintain();
     if ( is_string($success) ) {
-        error_log("Unable to generate public/private pair: ".$retval);
-        echo("Unable to generate public/private pair: ".$retval."<br/>\n");
+        error_log("Unable to generate public/private pair: ".$success);
+        echo("Unable to generate public/private pair: ".$success."<br/>\n");
     }
 
     // It seems like some automatically created LTI1.1 keys between
